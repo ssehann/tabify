@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Tab Group Saver</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="popup.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap">
+</head>
+<body>
+   <div class="container">
+       <h1 class="h3 mb-3">Tab Group Saver</h1>
+       <div class="input-group mb-3">
+           <input type="text" id="groupName" class="form-control" placeholder="Group Name">
+           <div class="input-group-append">
+               <button id="saveGroup" class="btn btn-primary">Save Group</button>
+           </div>
+       </div>
+       <button id="addCurrentTab" class="btn btn-secondary mb-3">Add Current Tab to Group</button>
+       <ul id="groupList" class="list-group"></ul>
+       <div id="addTabSection" style="display: none;">
+           <h2 class="h5 mt-3">Add Current Tab to Group</h2>
+           <ul id="groupSelection" class="list-group mb-3"></ul>
+       </div>
+
+
+       <div class="input-group mb-3">
+        <input type="text" id="searchTab" class="form-control" placeholder="Find a tab">
+        <div class="input-group-append">
+            <button id="searchButton" class="btn btn-secondary">Go!</button>
+        </div>
+        </div>
+        <ul id="searchResults" class="list-group" style="display: none;"></ul>
+
+
+       <div id="editGroup" style="display: none;">
+           <h2 class="h5 mt-3">Edit Group</h2>
+           <div class="input-group mb-3">
+               <input type="text" id="editGroupName" class="form-control" placeholder="New Group Name">
+               <div class="input-group-append">
+                   <button id="updateGroup" class="btn btn-primary">Update Group Name</button>
+               </div>
+           </div>
+           <button id="restoreAll" class="btn btn-success mb-3">Restore All Tabs</button>
+           <ul id="tabList" class="list-group mb-3"></ul>
+           <div class="input-group mb-3">
+               <input type="text" id="newTabTitle" class="form-control" placeholder="Tab Title">
+               <input type="text" id="newTabUrl" class="form-control" placeholder="Tab URL">
+               <div class="input-group-append">
+                   <button id="addTab" class="btn btn-secondary">Add Tab</button>
+               </div>
+           </div>
+           <button id="deleteGroup" class="btn btn-danger">Delete Group</button>
+       </div>
+   </div>
+   <script src="js/saveGroup.js" defer></script>
+   <script src="js/loadGroup.js" defer></script>
+   <script src="js/editGroup.js" defer></script>
+   <script src="js/popup.js" defer></script>
+</body>
+</html>
